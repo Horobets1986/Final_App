@@ -12,5 +12,4 @@ public class LogoutServlet extends HttpServlet {
         request.getSession().invalidate();
         response.sendRedirect(request.getContextPath() + "/user_pages/user_hello.xhtml");
     }
-
 }

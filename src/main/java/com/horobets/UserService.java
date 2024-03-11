@@ -1,9 +1,9 @@
 package com.horobets;
 
-import com.horobets.UserDAO;
-import com.horobets.UserRole;
-import com.horobets.User;
+import com.horobets.entity.UserDAO;
+
 import java.util.List;
+
 public class UserService {
     private UserDAO userDAO=new UserDAO();
     public List<UserRole> getAllUserRole() {

@@ -1,11 +1,9 @@
 package com.horobets;
 
-import com.horobets.BookDAO;
-import com.horobets.Book;
-import com.horobets.Format;
-import java.io.File;
+import com.horobets.entity.BookDAO;
+
 import java.util.List;
-import java.util.Objects;
+
 public class BookService {
     private BookDAO bookDAO = new BookDAO();
     public List<Book> getAllData() {
@@ -23,11 +21,6 @@ public class BookService {
     public void deleteData(int id,String name) {
         String pathname="d:/uploads/";
         bookDAO.deleteData(id);
-      /*  for(Format format : Format.values()) {
-            if (new File(pathname+name + format.getFormat()).delete()) {
-                System.out.println("Все файлы с именем "+name+" удалены");
-            }
-        }*/
     }
     public String findDataById(int id) {
         return bookDAO.findDataById(id);

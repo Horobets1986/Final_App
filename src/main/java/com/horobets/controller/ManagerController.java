@@ -1,8 +1,8 @@
-package com.horobets;
+package com.horobets.controller;
 
 import com.horobets.Book;
 import com.horobets.BookService;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
@@ -37,7 +37,7 @@ public class ManagerController implements Serializable {
         FacesContext context = FacesContext.getCurrentInstance();
         bookService.deleteData(id,name);
 
-        context.getExternalContext().redirect("http://localhost:8080/manager_pages/manager_hello.xhtml");
+        context.getExternalContext().redirect("http://localhost:8023/manager_pages/manager_hello.xhtml");
     }
     public void beforeLoadingPage(){
         if (!FacesContext.getCurrentInstance().isPostback()){

@@ -49,7 +49,7 @@ public class AdminController {
         User newUser = new User(username,password,0.0);
         if (getUsername().equals("")||getPassword().equals("")) {
             FacesContext context = FacesContext.getCurrentInstance();
-            context.getExternalContext().redirect("http://localhost:8080/addErrorServlet");
+            context.getExternalContext().redirect("http://localhost:8023/addErrorServlet");
         }
         else {
             if (!userService.isExist(getUsername())) {
@@ -58,12 +58,12 @@ public class AdminController {
                 } else {
                     FacesContext context = FacesContext.getCurrentInstance();
 
-                    context.getExternalContext().redirect("http://localhost:8080/addUserPasswordErrorServlet");
+                    context.getExternalContext().redirect("http://localhost:8023/addUserPasswordErrorServlet");
                 }
             }
             else {
                 FacesContext context = FacesContext.getCurrentInstance();
-                context.getExternalContext().redirect("http://localhost:8080/addUserErrorServlet");
+                context.getExternalContext().redirect("http://localhost:8023/addUserErrorServlet");
             }
         }
     }
